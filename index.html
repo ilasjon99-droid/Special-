@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Ahalyaa 🤍</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', sans-serif;
+        overflow: hidden;
+    }
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        animation: pop 1.2s ease;
+        max-width: 320px;
+    }
+    @keyframes pop {
+        0% { transform: scale(0); }
+        100% { transform: scale(1); }
+    }
+    h1 {
+        color: #ff4d6d;
+        font-size: 26px;
+    }
+    p {
+        font-size: 18px;
+        color: #444;
+        margin-top: 15px;
+    }
+    .heart {
+        position: absolute;
+        font-size: 20px;
+        animation: float 5s infinite ease-in;
+        color: #ff4d6d;
+    }
+    @keyframes float {
+        0% {
+            transform: translateY(100vh);
+            opacity: 0;
+        }
+        50% { opacity: 1; }
+        100% {
+            transform: translateY(-10vh);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Sorry vadhina garuu 🥺</h1>
+    <p><strong>(Ahalyaa 🤌)</strong></p>
+    <p>
+        Mee smile kosam ee chinna surprise 💖<br><br>
+        Please forgive me 🫶<br>
+        You’re really special 🌸
+    </p>
+</div>
+
+<script>
+    for (let i = 0; i < 20; i++) {
+        let heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        document.body.appendChild(heart);
+    }
+</script>
+
+</body>
+</html>
